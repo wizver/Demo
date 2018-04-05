@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="demo.login.mapper.LoginMapper">
+    <resultMap type="demo.login.model.UserInfo" id="userInfo">
+        <result property="userId"        column="USER_ID" />
+        <result property="passWord"      column="PASS_WORD" />
+        <result property="userNm"        column="USER_NM" />
+        <result property="deptNm"        column="DEPT_NM" />
+        <result property="userEmail"     column="USER_EMAIL" />
+    </resultMap>
+    
+    <select id="selectLoginUserInfo" parameterType="HashMap" resultMap="userInfo">
+        <![CDATA[
+            SELECT USER_ID                                     /* 사용자 ID */
+                  ,PASS_WORD                                   /* 사용자 비밀번호 */
+                  ,USER_NM         /* 사용자 명 */
+                  ,DEPT_NM         /* 부서 명 */
+                  ,USER_EMAIL      /* 이메일 주소 */
+              FROM TB_USER_MST
+           WHERE USER_ID   = #{pUserId}
+             AND PASS_WORD  = #{pPassWord}
+        ]]>
+    </select>
+    
+</mapper>
