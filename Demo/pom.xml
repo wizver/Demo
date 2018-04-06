@@ -199,11 +199,11 @@
             <artifactId>mybatis-spring</artifactId>
             <version>1.3.2</version>
         </dependency>
-        <dependency>
-            <groupId>com.kenai.nbpwr</groupId>
-            <artifactId>org-apache-commons-dbcp</artifactId>
-            <version>1.2.2-201002241055</version>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>com.kenai.nbpwr</groupId> -->
+<!--             <artifactId>org-apache-commons-dbcp</artifactId> -->
+<!--             <version>1.2.2-201002241055</version> -->
+<!--         </dependency> -->
         
         <!-- tiles -->
         <dependency>
@@ -237,16 +237,16 @@
            <version>1.2.2.LIFERAY-PATCHED-1</version>
         </dependency>
 
-        <!-- Apache POI(엑셀 다운로드) -->
+        <!-- Apache POI(엑셀) -->
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.7</version>
+            <version>3.16</version>
         </dependency>
         <dependency>
         <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>3.7</version>
+            <version>3.16</version>
         </dependency>
         <dependency>
             <groupId>net.sf.jxls</groupId>
